@@ -22,7 +22,7 @@ internal class Program
        
         
       
-        Console.WriteLine(HomeWork3.HasExit(0, 0, labirynth1));
+        Console.WriteLine(HomeWork3.HasExit(1, 1, labirynth1));
 
 
 
