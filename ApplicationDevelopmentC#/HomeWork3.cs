@@ -21,11 +21,11 @@ namespace ApplicationDevelopmentC_
                 return 0;
             }
 
-            else if(l[startI, startJ] == 2)
+            /* else if(l[startI, startJ] == 2)
             {
                 Console.WriteLine("Выход находится на входе!");
                 return 0;
-            }
+            } */
                 
             var stack = new Stack<Tuple<int, int>>();
 
