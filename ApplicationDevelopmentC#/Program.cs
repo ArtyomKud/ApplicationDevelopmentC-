@@ -8,7 +8,7 @@ internal class Program
 
         //HomeWork3
 
-        int[,] labirynth1 = new int[,]
+        /* int[,] labirynth1 = new int[,]
             {
                 {1, 1, 1, 1, 1, 1, 1 },
                 {1, 0, 0, 0, 0, 0, 1 },
@@ -22,7 +22,16 @@ internal class Program
        
         
       
-        Console.WriteLine(HomeWork3.HasExit(2, 0, labirynth1));
+        Console.WriteLine(HomeWork3.HasExit(1, 1, labirynth1)); 
+        */
+
+
+
+        //HomeWork4
+
+        HomeWork4 homeWork4 = new HomeWork4();
+        homeWork4.HomeWork4Metod();
+      
 
 
 
@@ -35,5 +44,5 @@ internal class Program
 
 
 
-    }
+}
 }
