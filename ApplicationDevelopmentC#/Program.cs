@@ -1,5 +1,6 @@
 ﻿using ApplicationDevelopmentC_;
 using ApplicationDevelopmentC_.HomeWork5;
+using ApplicationDevelopmentC_.HomeWork6;
 
 internal class Program
 {
@@ -30,24 +31,47 @@ internal class Program
 
         //HomeWork4
 
-        // HomeWork4 homeWork4 = new HomeWork4();
-        // homeWork4.HomeWork4Metod();
+        /* HomeWork4 homeWork4 = new HomeWork4();
+         homeWork4.HomeWork4Metod();
+        */
 
 
         // HomeWork5
 
-        Calc calc = new Calc();
-        calc.MyEventHandler += Calc_MyEventHandler1;
+        /*  Calc calc = new Calc();
+         calc.MyEventHandler += Calc_MyEventHandler1;
 
-        calc.Start();
-       
+         calc.Start();
+
+
+     }
+
+     private static void Calc_MyEventHandler1(object? sender, EventArgs e)
+     {
+         Console.WriteLine($"Результат:{((Calc)sender).Result}");
+     }
+        */
+
+
+        // HomeWork6
+
+         Calc_HW6 calc = new Calc_HW6();
+         calc.MyEventHandler += Calc_MyEventHandler1;
+
+         calc.Start();
+
+        
+
 
     }
 
-    private static void Calc_MyEventHandler1(object? sender, EventArgs e)
-    {
-        Console.WriteLine($"Результат:{((Calc)sender).Result}");
-    }
+      private static void Calc_MyEventHandler1(object? sender, EventArgs e)
+      {
+          Console.WriteLine($"Результат:{((Calc_HW6)sender).Result}");
+      }
+
+           
+
 
           
 

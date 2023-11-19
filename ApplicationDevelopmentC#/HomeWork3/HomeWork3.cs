@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationDevelopmentC_
+namespace ApplicationDevelopmentC_.HomeWork3
 {
     public class HomeWork3
     {
@@ -15,7 +15,7 @@ namespace ApplicationDevelopmentC_
             int сountOutputs = 0;
             int flag = 0;
 
-            if (l[startI, startJ] == 1) 
+            if (l[startI, startJ] == 1)
             {
                 Console.WriteLine("Начальная точка находится в стене!");
                 return 0;
@@ -26,41 +26,41 @@ namespace ApplicationDevelopmentC_
                 Console.WriteLine("Выход находится на входе!");
                 return 0;
             } */
-                
+
             var stack = new Stack<Tuple<int, int>>();
 
-            stack.Push(new (startI, startJ));
+            stack.Push(new(startI, startJ));
 
-            while(stack.Count > 0)
+            while (stack.Count > 0)
             {
                 var temp = stack.Pop();
 
-                if ((temp.Item1 == 0 || temp.Item1 == l.GetLength(0)-1 || temp.Item2 == 0 || temp.Item2 == l.GetLength(1) - 1) && flag != 0)
+                if ((temp.Item1 == 0 || temp.Item1 == l.GetLength(0) - 1 || temp.Item2 == 0 || temp.Item2 == l.GetLength(1) - 1) && flag != 0)
                 {
-                    
+
                     сountOutputs++;
                 }
 
                 l[temp.Item1, temp.Item2] = 1;
 
-                if(temp.Item2 > 0 && l[temp.Item1, temp.Item2-1] != 1)
+                if (temp.Item2 > 0 && l[temp.Item1, temp.Item2 - 1] != 1)
                 {
                     stack.Push(new(temp.Item1, temp.Item2 - 1)); //влево
                 }
 
-                if (temp.Item2 +1 < l.GetLength(1) && l[temp.Item1, temp.Item2 + 1] != 1)
+                if (temp.Item2 + 1 < l.GetLength(1) && l[temp.Item1, temp.Item2 + 1] != 1)
                 {
                     stack.Push(new(temp.Item1, temp.Item2 + 1)); //вправо
                 }
 
-                if (temp.Item1 > 0 && l[temp.Item1-1, temp.Item2] != 1)
+                if (temp.Item1 > 0 && l[temp.Item1 - 1, temp.Item2] != 1)
                 {
-                    stack.Push(new(temp.Item1-1, temp.Item2)); //вверх
+                    stack.Push(new(temp.Item1 - 1, temp.Item2)); //вверх
                 }
 
-                if (temp.Item1 + 1 < l.GetLength(0) && l[temp.Item1+1, temp.Item2] != 1)
+                if (temp.Item1 + 1 < l.GetLength(0) && l[temp.Item1 + 1, temp.Item2] != 1)
                 {
-                    stack.Push(new(temp.Item1+1, temp.Item2)); //вправо
+                    stack.Push(new(temp.Item1 + 1, temp.Item2)); //вправо
                 }
                 flag++;
             }
