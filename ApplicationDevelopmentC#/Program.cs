@@ -1,6 +1,8 @@
 ﻿using ApplicationDevelopmentC_;
 using ApplicationDevelopmentC_.HomeWork5;
 using ApplicationDevelopmentC_.HomeWork6;
+using ApplicationDevelopmentC_.HomeWork8;
+using static System.Net.Mime.MediaTypeNames;
 
 internal class Program
 {
@@ -55,20 +57,28 @@ internal class Program
 
         // HomeWork6
 
-         Calc_HW6 calc = new Calc_HW6();
-         calc.MyEventHandler += Calc_MyEventHandler1;
+        /*Calc_HW6 calc = new Calc_HW6();
+        calc.MyEventHandler += Calc_MyEventHandler1;
 
-         calc.Start();
+        calc.Start(); */
 
-        
+
+
+        // HomeWork8
+
+
+       HomeWork8 homeWork8 = new HomeWork8();
+        homeWork8.searchForFileByTypeAndText(args[0], args[1]);
+
+
 
 
     }
 
-      private static void Calc_MyEventHandler1(object? sender, EventArgs e)
+     /* private static void Calc_MyEventHandler1(object? sender, EventArgs e)
       {
           Console.WriteLine($"Результат:{((Calc_HW6)sender).Result}");
-      }
+      } */
 
            
 
